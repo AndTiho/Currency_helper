@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Курсы валют</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header class="header">
+    <div class="header__logo">
+      <span class="logo-mark">₿</span>
+      <span class="logo-text">CURRENCY<br><em>VIEWER</em></span>
+    </div>
+    <p class="header__sub">Актуальные курсы · open.er-api.com</p>
+  </header>
+
+  <main class="main">
+
+    <!-- Панель управления -->
+    <section class="controls">
+      <div class="controls__label">Базовая валюта</div>
+      <div class="controls__row">
+        <div class="select-wrap">
+          <select id="baseSelect" aria-label="Выберите базовую валюту">
+            <option value="USD">USD — Доллар США</option>
+            <option value="EUR">EUR — Евро</option>
+            <option value="GBP">GBP — Фунт стерлингов</option>
+            <option value="RUB">RUB — Российский рубль</option>
+            <option value="CNY">CNY — Китайский юань</option>
+            <option value="JPY">JPY — Японская иена</option>
+            <option value="CHF">CHF — Швейцарский франк</option>
+          </select>
+        </div>
+        <button id="loadBtn" class="btn">Загрузить курсы</button>
+      </div>
+
+      <div class="controls__filter">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Фильтр по коду или названию…"
+          aria-label="Поиск валюты"
+          disabled
+        />
+      </div>
+    </section>
+
+    <!-- Статус / ошибка -->
+    <div id="statusBar" class="status-bar" hidden></div>
+
+    <!-- Мета-строка -->
+    <div id="metaRow" class="meta-row" hidden>
+      <span id="metaBase"></span>
+      <span id="metaUpdated"></span>
+      <span id="metaCount"></span>
+    </div>
+
+    <!-- Таблица курсов -->
+    <section id="tableSection" class="table-section" hidden>
+      <table class="rates-table" aria-label="Таблица курсов валют">
+        <thead>
+          <tr>
+            <th class="col-code" data-sort="code">Код <span class="sort-arrow">↕</span></th>
+            <th class="col-name" data-sort="name">Валюта <span class="sort-arrow">↕</span></th>
+            <th class="col-rate" data-sort="rate">Курс <span class="sort-arrow">↕</span></th>
+            <th class="col-inv">1 / курс</th>
+          </tr>
+        </thead>
+        <tbody id="ratesBody"></tbody>
+      </table>
+    </section>
+
+    <!-- Пустое состояние -->
+    <div class="empty-state" id="emptyState">
+      <div class="empty-state__icon">◈</div>
+      <p>Выберите базовую валюту<br>и нажмите «Загрузить курсы»</p>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    Данные обновляются раз в 24 ч · Источник: open.er-api.com
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "source": "https://www.cbr-xml-daily.ru/daily_json.js",
+  "generated_at": "2026-05-18T04:42:20",
+  "date": "2026-05-16T11:30:00+03:00",
+  "previous_date": "2026-05-15T11:30:00+03:00",
+  "currencies": [
+    {
+      "code": "USD",
+      "name": "Доллар США",
+      "nominal": 1,
+      "current_value": 73.1275,
+      "previous_value": 73.1385,
+      "difference": -0.011,
+      "percent_change": -0.015
+    },
+    {
+      "code": "CNY",
+      "name": "Юань",
+      "nominal": 1,
+      "current_value": 10.7318,
+      "previous_value": 10.7855,
+      "difference": -0.0537,
+      "percent_change": -0.4979
+    },
+    {
+      "code": "EUR",
+      "name": "Евро",
+      "nominal": 1,
+      "current_value": 85.183,
+      "previous_value": 86.2899,
+      "difference": -1.1069,
+      "percent_change": -1.2828
+    }
+  ]
+}
