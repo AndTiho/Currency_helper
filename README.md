@@ -2,7 +2,7 @@
 
 ## Repository
 
-https://github.com/USERNAME/Currency_helper
+https://github.com/AndTiho/Currency_helper.git
 
 Набор мини-проектов для тестового задания на позицию IT-специалиста.
 
